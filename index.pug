@@ -1,0 +1,351 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Lun's portfolio
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Staatliches&display=swap')
+    link(rel='stylesheet' href='/portfolio/css/style.css')
+  body
+    // partial:index.partial.html
+    .showArea
+      img.hand(src='/portfolio/img/start/start1.png')
+      img.mouse.img-fluid(src='/portfolio/img/start/start2.png' alt='')
+      img.name.img-fluid(src='/portfolio/img/start/start3.png' alt='')
+    nav.nav.top
+      .logo LUN's
+      ul.list
+        li
+          a#b1(href='#resume')
+            .en RESUME
+            .ch 進履歷
+        li
+          a#b2(href='#works')
+            .en WORKS
+            .ch 作品集
+        li
+          a#b3(href='#footer')
+            .en CONTACT
+            .ch 聯絡我
+      #menubtn.btn
+        .line.line1
+        .line.line2
+        .line.line3
+      section#bigmenu.collapse
+        ul
+          li.bigmenuli
+            a#b1.b1(href='#resume')
+              span RESUME 
+              span  | 進履歷
+          li.bigmenuli
+            a#b2.b2(href='#works')
+              span WORKS  
+              span  | 作品集
+          li.bigmenuli
+            a#b3.b3(href='#footer')
+              span CONTACT 
+              span  | 聯絡我
+    .page
+      section#first
+        .namelogo
+          h2 CHIA-LUN,
+          h2 CHEN
+        .explore
+          .exploreline.mousetop
+        .bigheadleft
+          img(src='/portfolio/img/start/lunlogo.png' alt='')
+        .bigheadright
+          img(src='/portfolio/img/start/lunlogo.png' alt='')
+        .line
+          img.curveline1(src='/portfolio/img/move/line.svg' alt='')
+        .line
+          img.curveline2(src='/portfolio/img/move/line.svg' alt='')
+        .line
+          img.curveline3(src='/portfolio/img/move/line.svg' alt='')
+      section#resume
+        .autobiography
+          img.tri(src='/portfolio/img/move/tri.svg' alt='')
+          h1 autobiography
+          p(data-bottom-top='opacity:0' data-center='opacity:1')
+            | 我叫陳家倫，畢業於國立臺中教育大學數位內容科技學系，在學期間因能妥善安排時間，可同時兼顧學業並參與系學會及系排球隊，喜歡團隊一起努力朝目標完成任務的感覺，除了能協助團隊活動進行亦能與他人和諧相處。
+          p(data-bottom-top='opacity:0' data-center='opacity:1')
+            | 為了認識不一樣的文化擴展視野，畢業後曾經到日本及澳洲打工度假，體驗了許多不同的工作，除了皆能獨立自主處理工作事務外，亦能思考如何更有效率地完成交辦事項，並且懂得從工作中尋找成就感，更因為認真敬業的態度受到同事肯定。
+          p(data-bottom-top='opacity:0' data-center='opacity:1')
+            | 在台灣，從事過光學儀器公司的網站美編人員、國健署的計畫助理、補習班的美編設計，擔任網站美編人員時，曾因應節慶設計首頁Banner並獲得同事稱讚。擔任計畫助理期間，主要辦理研討會相關行政事務，能依期程妥善規劃並與講師溝通協調以利活動進行。於補習班從事美編設計時，製作招生及榜單等文宣品，讓我對設計美學較熟悉，也因我的設計，使得補習班的招生更為順利，亮眼的榜單更廣為人知。
+          p(data-bottom-top='opacity:0' data-center='opacity:1') 由於擔任計畫助理時，看著網站從無到有的建置過程更加深了我對網站設計的興趣，因此參加職訓中心辦理的網頁程式設計課程，最後並獨力完成商品購物網站的前端視覺設計。
+          p(data-bottom-top='opacity:0' data-center='opacity:1')
+            | 過往平面設計及網站製作的經驗，加深自己對於前端網頁視覺設計的興趣，很喜歡做出成品後那種很有成就感的感覺，平常也會瀏覽各式網站增加靈感，期許自己也能有機會為公司做出獨一無二的網站，希望貴公司給我一個面試的機會。
+      section#resume2(data-bottom-top='opacity:0' data-center='opacity:1')
+        h1 skills
+        .container(data-bottom-top='transform:translateY(100px)' data-center='transform:translateY(0px)')
+          ul
+            li.skills HTML(pug)、CSS(sass) 
+            li.skills javascript、jquery
+            li.skills Vue
+            li.skills Mysql、Mssql 
+            li.skills Photoshop、Illustrator
+            li.skills C#、.Net MVC
+          .skillbar
+            .bar
+              .barcontent.barcontent1(data-bottom-top='width:0%' data-center='width:85%')
+            .bar
+              .barcontent.barcontent2(data-bottom-top='width:0%' data-center='width:55%')
+            .bar
+              .barcontent.barcontent3(data-bottom-top='width:0%' data-center='width:25%')
+            .bar
+              .barcontent.barcontent4(data-bottom-top='width:0%' data-center='width:30%')
+            .bar
+              .barcontent.barcontent5(data-bottom-top='width:0%' data-center='width:85%')
+            .bar
+              .barcontent.barcontent6(data-bottom-top='width:0%' data-center='width:20%')
+      section#resume3
+        h1 resume
+        .container(data-bottom-top='transform:translateY(200px);opacity:0' data-center='transform:translateY(0px);opacity:1')
+          svg.resumepic(viewBox='0 0 600 400')
+            line(x1='45' y1='30' x2='45' y2='215')
+              animate(attributeName='y1' dur='5s' values='30;15;30' repeatCount='indefinite')
+              animate(attributeName='y2' dur='5s' values='215;200;215' repeatCount='indefinite')
+            line.school(x1='125' y1='15' x2='125' y2='200')
+              animate(attributeName='y1' dur='5s' values='15;30;15' repeatCount='indefinite')
+              animate(attributeName='y2' dur='5s' values='200;215;200' repeatCount='indefinite')
+            line(x1='205' y1='30' x2='205' y2='125')
+              animate(attributeName='y1' dur='5s' values='30;15;30' repeatCount='indefinite')
+              animate(attributeName='y2' dur='5s' values='130;115;130' repeatCount='indefinite')
+            line(x1='285' y1='15' x2='285' y2='200')
+              animate(attributeName='y1' dur='5s' values='15;30;15' repeatCount='indefinite')
+              animate(attributeName='y2' dur='5s' values='200;215;200' repeatCount='indefinite')
+            line(x1='365' y1='30' x2='365' y2='200')
+              animate(attributeName='y1' dur='5s' values='30;15;30' repeatCount='indefinite')
+              animate(attributeName='y2' dur='5s' values='200;185;200' repeatCount='indefinite')
+            line(x1='445' y1='15' x2='445' y2='110')
+              animate(attributeName='y1' dur='5s' values='15;30;15' repeatCount='indefinite')
+              animate(attributeName='y2' dur='5s' values='110;125;110' repeatCount='indefinite')
+            line(x1='525' y1='30' x2='525' y2='150')
+              animate(attributeName='y1' dur='5s' values='30;15;30' repeatCount='indefinite')
+              animate(attributeName='y2' dur='5s' values='150;135;150' repeatCount='indefinite')
+            circle(cx='50' cy='20' r='5')
+              animate(attributeName='cy' dur='5s' values='20;5;20' repeatCount='indefinite')
+            text.time(x='50' y='20') 2013/07 
+            text.time(x='50' y='35') 2013/08 
+            circle(cx='130' cy='5' r='5')
+              animate(attributeName='cy' dur='5s' values='5;20;5' repeatCount='indefinite')
+            text.time(x='130' y='35') 2015/06 
+            circle(cx='210' cy='20' r='5')
+              animate(attributeName='cy' dur='5s' values='20;5;20' repeatCount='indefinite')
+            text.time(x='210' y='20') 2015/10 
+            text.time(x='210' y='35') 2016/09 
+            circle(cx='290' cy='5' r='5')
+              animate(attributeName='cy' dur='5s' values='5;20;5' repeatCount='indefinite')
+            text.time(x='290' y='20') 2016/11 
+            text.time(x='290' y='35') 2017/03 
+            circle(cx='370' cy='20' r='5')
+              animate(attributeName='cy' dur='5s' values='20;5;20' repeatCount='indefinite')
+            text.time(x='370' y='20') 2017/03 
+            text.time(x='370' y='35') 2018/02 
+            circle(cx='450' cy='5' r='5')
+              animate(attributeName='cy' dur='5s' values='5;20;5' repeatCount='indefinite')
+            text.time(x='450' y='20') 2020/04 
+            text.time(x='450' y='35') 2018/04 
+            circle(cx='530' cy='20' r='5')
+              animate(attributeName='cy' dur='5s' values='20;5;20' repeatCount='indefinite')
+            text.time(x='530' y='20') 2019/04 
+            text.time(x='530' y='35') 2021/03 
+            polyline(points='0,5 50,20 130,5 210,20 290,5 370,20 450,5 530,20 580,5')
+              animate(attributeName='points' dur='5s' values='0,5 50,20 130,5 210,20 290,5 370,20 450,5 530,20 580,5;0,20 50,5 130,20 210,5 290,20 370,5 450,20 530,5 580,20;0,5 50,20 130,5 210,20 290,5 370,20 450,5 530,20 580,5' repeatCount='indefinite')
+            svg.text
+              text.company(x='50' y='30')
+                | 台北數位藝術中心
+                animate(attributeName='y' dur='5s' values='30;15;30' repeatCount='indefinite')
+              text.title(x='25' y='50')
+                | 實習生
+                animate(attributeName='y' dur='5s' values='50;35;50' repeatCount='indefinite')
+              text(x='6' y='50')
+                | 網站更新、展場佈置
+                animate(attributeName='y' dur='5s' values='50;35;50' repeatCount='indefinite')
+              svg.text
+                text.company(x='130' y='30')
+                  | 國立臺中教育大學 
+                  animate(attributeName='y' dur='5s' values='15;30;15' repeatCount='indefinite')
+                text.title(x='105' y='50')
+                  | 數位內容科技學系 畢業
+                  animate(attributeName='y' dur='5s' values='35;50;35' repeatCount='indefinite')
+              svg.text
+                text.company(x='210' y='30')
+                  | 日本打工
+                  animate(attributeName='y' dur='5s' values='30;15;30' repeatCount='indefinite')
+                text.title(x='185' y='50')
+                  | 房務人員
+                  animate(attributeName='y' dur='5s' values='50;35;50' repeatCount='indefinite')
+              svg.text
+                text.company(x='290' y='30')
+                  | 力丞儀器有限公司
+                  animate(attributeName='y' dur='5s' values='15;30;15' repeatCount='indefinite')
+                text.title(x='265' y='50')
+                  | 網站美編設計人員
+                  animate(attributeName='y' dur='5s' values='35;50;35' repeatCount='indefinite')
+                text(x='246' y='50')
+                  | 網站更新、商品圖製作
+                  animate(attributeName='y' dur='5s' values='35;50;35' repeatCount='indefinite')  
+              svg.text
+                text.company(x='370' y='30')
+                  | 台灣性教育學會 
+                  animate(attributeName='y' dur='5s' values='30;15;30' repeatCount='indefinite')
+                text.title(x='345' y='50')
+                  | 計畫助理、秘書
+                  animate(attributeName='y' dur='5s' values='50;35;50' repeatCount='indefinite')
+                text(x='326' y='50')
+                  | 辦理研習營、網站促進宣導、文書處理
+                  animate(attributeName='y' dur='5s' values='50;35;50' repeatCount='indefinite')
+              svg.text
+                text.company(x='450' y='30')
+                  | 澳洲打工 
+                  animate(attributeName='y' dur='5s' values='15;30;15' repeatCount='indefinite')
+                text.title(x='425' y='50')
+                  | 倉儲人員、採集包裝人員
+                  animate(attributeName='y' dur='5s' values='35;50;35' repeatCount='indefinite')
+                text(x='406' y='50')
+                  | 辦理研習營、網站促進宣導、文書處理
+                  animate(attributeName='y' dur='5s' values='35;50;35' repeatCount='indefinite')
+              svg.text
+                text.company(x='530' y='30')
+                  | 育昇補習班 
+                  animate(attributeName='y' dur='5s' values='30;15;30' repeatCount='indefinite')
+                text.title(x='505' y='50')
+                  | 美編設計
+                  animate(attributeName='y' dur='5s' values='50;35;50' repeatCount='indefinite')
+                text(x='486' y='50')
+                  | 文宣品製作、影片製作
+                  animate(attributeName='y' dur='5s' values='50;35;50' repeatCount='indefinite')
+      section#resume4
+        h1 resume
+        .container(data-bottom-top='transform:translateY(200px);opacity:0' data-center='transform:translateY(0px);opacity:1')
+          svg.resumevertical
+            line(x1='120' y1='30' x2='250' y2='30')
+            line.school(x1='120' y1='110' x2='250' y2='110')
+            line(x1='120' y1='190' x2='180' y2='190')
+            line(x1='120' y1='270' x2='250' y2='270')
+            line(x1='120' y1='350' x2='230' y2='350')
+            line(x1='120' y1='430' x2='180' y2='430')
+            line(x1='120' y1='510' x2='200' y2='510')
+            circle(cx='80' cy='50' r='5')
+              animate(attributeName='cx' dur='5s' values='80;100;80' repeatCount='indefinite')
+            text.time(x='0' y='50') 2013/07 
+            text.time(x='0' y='65') 2013/08 
+            text.company(x='120' y='30') 台北數位藝術中心
+            text.title(x='140' y='50') 實習生
+            text(x='140' y='70') 網站更新、展場佈置 
+            circle(cx='100' cy='130' r='5')
+              animate(attributeName='cx' dur='5s' values='100;80;100' repeatCount='indefinite')
+            text.time(x='0' y='130') 2011/09 
+            text.time(x='0' y='145') 2015/06
+            text.company(x='120' y='110') 國立台灣教育大學
+            text.title(x='140' y='130') 數位內容科技學系 畢業
+            circle(cx='80' cy='210' r='5')
+              animate(attributeName='cx' dur='5s' values='80;100;80' repeatCount='indefinite')
+            text.time(x='0' y='210') 2015/10 
+            text.time(x='0' y='225') 2016/09 
+            text.company(x='120' y='190') 日本打工
+            text.title(x='140' y='210') 房務人員
+            circle(cx='100' cy='290' r='5')
+              animate(attributeName='cx' dur='5s' values='100;80;100' repeatCount='indefinite')
+            text.time(x='0' y='290') 2016/11 
+            text.time(x='0' y='305') 2017/03 
+            text.company(x='120' y='270') 力丞儀器有限公司
+            text.title(x='140' y='290') 網站美編設計人員
+            text(x='140' y='310') 網站更新、商品圖製作 
+            circle(cx='80' cy='370' r='5')
+              animate(attributeName='cx' dur='5s' values='80;100;80' repeatCount='indefinite')
+            text.time(x='0' y='370') 2017/03 
+            text.time(x='0' y='385') 2018/08 
+            text.company(x='120' y='350') 台灣性教育學會
+            text.title(x='140' y='370') 計畫助理、秘書
+            text(x='140' y='390') 研習營辦理、網站促進宣導  
+            circle(cx='100' cy='450' r='5')
+              animate(attributeName='cx' dur='5s' values='100;80;100' repeatCount='indefinite')
+            text.time(x='0' y='450') 2018/04 
+            text.time(x='0' y='465') 2020/04 
+            text.company(x='120' y='430') 澳洲打工
+            text.title(x='140' y='450') 倉儲、採果包裝人員
+            circle(cx='80' cy='530' r='5')
+              animate(attributeName='cx' dur='5s' values='80;100;80' repeatCount='indefinite')
+            text.time(x='0' y='530') 2019/04 
+            text.time(x='0' y='545') 2021/03
+            text.company(x='120' y='510') 育昇補習班
+            text.title(x='140' y='530') 美編設計人員
+            text(x='140' y='550') 文宣品製作、影片製作
+            polyline(points='90,10 80,50 100,130 80,210 100,290 80,370 100,450 80,530 90,570')
+              animate(attributeName='points' dur='5s' values='90,10 80,50 100,130 80,210 100,290 80,370 100,450 80,530 90,570;90,10 100,50 80,130 100,210 80,290 100,370 80,450 100,530 90,570;90,10 80,50 100,130 80,210 100,290 80,370 100,450 80,530 90,570' repeatCount='indefinite')
+      section#works
+        .container
+          .row
+            .col-10.offset-1.col-md-12.offset-md-0
+              h1 works
+          .row
+            .col-md-6.col-10.offset-1.offset-md-0.offset-1.offset-md-0.work(data-bottom-top='transform:translateY(100px);opacity:0' data-center='transform:translateY(0px);opacity:1')
+              img.img-fluid.img-fluid(src='https://i.imgur.com/rveGnl5.png' alt='')
+              .text
+                h4 喵嗚工作室
+                h4 yellowstudio
+              a.link(href='https://rita8216.github.io/yellowstudio/index.html' target='_blank')
+                i.fas.fa-link
+            .col-md-6.col-10.offset-1.offset-md-0.work(data-bottom-top='transform:translateY(100px);opacity:0' data-center='transform:translateY(0px);opacity:1')
+              img(src='https://i.imgur.com/t6cZlXF.png' alt='')
+              .text
+                h4 印刷史
+                h4 printer
+              a.link(href='https://rita8216.github.io/printer/index.html' target='_blank')
+                i.fas.fa-link
+            .col-md-4.col-10.offset-1.offset-md-0.work(data-bottom-top='transform:translateY(100px);opacity:0' data-center='transform:translateY(0px);opacity:1')
+              img(src='https://i.imgur.com/t5iUppo.png' alt='')
+              .text
+                h4 hahow 網站
+                h4 api串接練習
+              a.link(href='https://rita8216.github.io/hahowpractice/index.html' target='_blank')
+                i.fas.fa-link
+            .col-md-4.col-10.offset-1.offset-md-0.work(data-bottom-top='transform:translateY(100px);opacity:0' data-center='transform:translateY(0px);opacity:1')
+              img(src='https://i.imgur.com/vneThHH.png' alt='')
+              .text
+                h4 燕姑姑手作布坊
+                h4 yangugu
+              a.link(href='https://rita8216.github.io/yangugu/index.html' target='_blank')
+                i.fas.fa-link
+            .col-md-4.col-10.offset-1.offset-md-0.work(data-bottom-top='transform:translateY(100px);opacity:0' data-center='transform:translateY(0px);opacity:1')
+              img(src='https://i.imgur.com/y091ue6.png' alt='')
+              .text
+                h4 戴比麵包工坊
+                h4 Debby bakery
+              a.link(href='https://rita8216.github.io/bakery/index.html' target='_blank')
+                i.fas.fa-link
+            .col-md-6.col-10.offset-1.offset-md-0.work(data-bottom-top='transform:translateY(100px);opacity:0' data-center='transform:translateY(0px);opacity:1')
+              img(src='https://i.imgur.com/D8cj3Hk.png' alt='')
+              .text
+                h4 健身中心
+                h4 gopower
+              a.link(href='https://rita8216.github.io/gopower/index.html' target='_blank')
+                i.fas.fa-link
+            .col-md-6.col-10.offset-1.offset-md-0.work(data-bottom-top='transform:translateY(100px);opacity:0' data-center='transform:translateY(0px);opacity:1')
+              img(src='https://i.imgur.com/Qwc3z3r.png' alt='')
+              .text
+                h4 重機人生
+                h4 passion life
+              a.link(href='https://rita8216.github.io/scooter/index.html' target='_blank')
+                i.fas.fa-link
+      footer#footer
+        .container-fluid
+          p 陳家倫 Rita 
+          p T. +886-3-3377631 
+          p
+            | M. +886-987969413 
+            i.far.fa-envelopep  
+          p ritarita820106@gmail.com 
+          p ©LUN ALL RIGHTS RESERVED 
+          p DESIGN BY LUN
+      #cross
+    // partial
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='https://kit.fontawesome.com/e38d88a225.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js')
+    script(src='/portfolio/js/script.js')

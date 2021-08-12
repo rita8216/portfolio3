@@ -1,0 +1,1066 @@
+@charset "UTF-8";
+* {
+    font-family: 'Poppins', 'Microsoft JhengHei', Helvetica, Arial, sans-serif, 微軟正黑體;
+    letter-spacing: 1.5px;
+    /* border: solid 1px black; */
+}
+
+html,
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* 開頭動畫 */
+
+.showArea {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: white;
+}
+
+.showArea .hand {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    margin-left: -200px;
+    margin-top: -200px;
+    -webkit-animation: showPic 8s;
+    animation: showPic 8s;
+    height: 400px;
+}
+
+.showArea .mouse {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    margin-left: -200px;
+    margin-top: -200px;
+    -webkit-animation: showPic 8s;
+    animation: showPic 8s;
+    height: 400px;
+}
+
+.showArea .name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    -webkit-animation: showPic 8s;
+    animation: showPic 8s;
+    height: 400px;
+}
+
+@-webkit-keyframes showPic {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+}
+
+@keyframes showPic {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+}
+
+
+/* 導覽列 */
+
+.nav.top {
+    background-color: transparent;
+    color: black;
+    border-bottom: solid 1px #444;
+}
+
+.nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    color: black;
+    z-index: 20;
+}
+
+.nav .logo {
+    float: left;
+    font-size: 20px;
+    margin: 15px;
+    margin-left: 30px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 300;
+}
+
+.nav .list {
+    margin-right: 20px;
+    height: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: absolute;
+    right: 20px;
+}
+
+.nav .list li {
+    float: left;
+    width: 120px;
+    height: 100%;
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav .list li:hover .en {
+    opacity: 0;
+}
+
+.nav .list li:hover .ch {
+    opacity: 1;
+    padding-bottom: 6px;
+}
+
+.nav .list li .en,
+.nav .list li .ch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.nav .list li .en {
+    opacity: 1;
+    color: black;
+}
+
+.nav .list li .en.topcolor {
+    color: white;
+}
+
+.nav .list li .ch {
+    opacity: 0;
+    border-bottom: 1px solid black;
+    padding-bottom: 0px;
+    color: black;
+}
+
+.nav .list li .ch.topcolor {
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.nav .btn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    cursor: pointer;
+    display: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.nav .btn .line {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0px;
+    padding: 2px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.nav .btn .line.line1 {
+    width: 30px;
+    top: 11px;
+    background-color: #111;
+}
+
+.nav .btn .line.line1.lineclick {
+    -webkit-transform: translate(-2px, 7px) rotate(45deg);
+    transform: translate(-2px, 7px) rotate(45deg);
+}
+
+.nav .btn .line.line2 {
+    top: 18px;
+    background-color: #333;
+}
+
+.nav .btn .line.line2.lineclick {
+    -webkit-transform: rotate(180deg) scale(0.1);
+    transform: rotate(180deg) scale(0.1);
+    opacity: 0;
+}
+
+.nav .btn .line.line3 {
+    width: 30px;
+    top: 25px;
+    background-color: #666;
+}
+
+.nav .btn .line.line3.lineclick {
+    -webkit-transform: translate(-2px, -7px) rotate(-45deg);
+    transform: translate(-2px, -7px) rotate(-45deg);
+}
+
+
+/* 手機版導覽列 */
+
+section#bigmenu {
+    width: 100%;
+    height: 800px;
+    background-color: white;
+}
+
+section#bigmenu ul {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+section#bigmenu ul li {
+    list-style: none;
+    margin: 30px;
+    font-size: 14px;
+    opacity: 0;
+}
+
+section#bigmenu ul li a {
+    text-decoration: none;
+    color: black;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+section#bigmenu ul li a:hover {
+    color: #555;
+}
+
+
+/* banner */
+
+section#first {
+    margin: 0px;
+    /* margin-top: 50px; */
+    top: 20px;
+    padding: 0;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+    /* background-image: url('https://i.imgur.com/V1nESzH.jpg'); */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 800px) {
+    section#first {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav .btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .nav .list {
+        display: none;
+    }
+}
+
+section#first #cross {
+    position: absolute;
+    background-image: url('https://i.imgur.com/iBt2icQ.png');
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    -webkit-transform: translate(-60%, -60%);
+    transform: translate(-60%, -60%);
+    z-index: 10;
+}
+
+section#first .namelogo {
+    position: absolute;
+    left: 50%;
+    top: 180px;
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    -webkit-animation: logonameShow 2s;
+    animation: logonameShow 2s;
+    z-index: 10;
+    color: white;
+}
+
+section#first .namelogo h2 {
+    font-family: 'Staatliches', cursive;
+    font-size: 50px;
+    text-shadow: 3px 3px 3px #000;
+}
+
+@-webkit-keyframes logonameShow {
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes logonameShow {
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+section#first .explore {
+    position: absolute;
+    background-color: white;
+    border: solid 2px rgb(0, 0, 0);
+    border-radius: 11px;
+    top: 320px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 20px;
+    height: 25px;
+    -webkit-animation: mousemove 1.2s infinite;
+    animation: mousemove 1.2s infinite;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 3px;
+    box-shadow: 0px 0px 3px;
+    z-index: 10;
+}
+
+section#first .explore.top {
+    opacity: 1;
+}
+
+section#first .explore:after {
+    content: 'V';
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    left: 35%;
+    -webkit-transform: scaleX(2.2);
+    transform: scaleX(2.2);
+    font-size: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px;
+}
+
+section#first .explore .exploreline {
+    width: 2px;
+    height: 10px;
+    background-color: #333;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+@-webkit-keyframes mousemove {
+    0% {
+        top: 320px;
+    }
+    50% {
+        top: 330px;
+    }
+    100% {
+        top: 320px;
+    }
+}
+
+@keyframes mousemove {
+    0% {
+        top: 320px;
+    }
+    50% {
+        top: 330px;
+    }
+    100% {
+        top: 320px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav .btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .nav .list {
+        display: none;
+    }
+}
+
+.topPic img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+
+/* 大頭 */
+
+section#head {
+    height: 400px;
+    position: relative;
+}
+
+section#head .lunHead {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    margin-top: 100px;
+    transition: all 2s;
+}
+
+section#head .lunHead.show {
+    opacity: 1;
+    margin-top: 0px;
+}
+
+
+/* 自傳 */
+
+section#resume {
+    position: relative;
+    /* height: 500px; */
+    /* background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, white), to(#ffbb33)); */
+    /* background: linear-gradient(transparent 0%, white 40%, #ffbb33); */
+    background-image: url('https://i.imgur.com/V1nESzH.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px 0px;
+}
+
+section#resume .autobiography {
+    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    border: solid 2px black;
+    font-size: 13px;
+    text-indent: 28px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px;
+    box-shadow: 0px 0px 5px;
+    -webkit-animation: resumemove 2.4s;
+    animation: resumemove 2.4s;
+    position: relative;
+    opacity: 0;
+    transition: 1.5s;
+    transform: translateX(200px);
+}
+
+section#resume .autobiography.show {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+section#resume .autobiography h1 {
+    position: absolute;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    bottom: 90px;
+    left: -150px;
+    font-family: 'Staatliches', cursive;
+}
+
+section#resume .autobiography .tri {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    -webkit-transform: translateY(-105%);
+    transform: translateY(-105%);
+}
+
+@-webkit-keyframes resumemove {
+    0% {
+        top: 50px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes resumemove {
+    0% {
+        top: 50px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section#resume {
+        height: 700px;
+    }
+}
+
+
+/* 個人特質 */
+
+section#personality .container {
+    margin: 100px auto;
+    text-align: center;
+}
+
+section#personality .icongroup:hover .icon {
+    transform: scale(1.1);
+}
+
+section#personality .icongroup:hover .en {
+    opacity: 0;
+}
+
+section#personality .icongroup:hover .ch {
+    opacity: 1;
+}
+
+section#personality .icongroup {
+    opacity: 0;
+    transform: scale(0.1);
+    transition: 1.5s;
+}
+
+section#personality .icongroup1 {
+    /* transition-delay: 1s; */
+}
+
+section#personality .icongroup2 {
+    transition-delay: 0.3s;
+}
+
+section#personality .icongroup3 {
+    transition-delay: 0.6s;
+}
+
+section#personality .icongroup.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+section#personality .icon {
+    max-width: 200px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+section#personality .en,
+section#personality .ch {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+section#personality .ch {
+    opacity: 0;
+}
+
+
+/* skills技能吧 */
+
+.skillsgroup {
+    opacity: 0;
+    transition: 5s;
+}
+
+.skillsgroup.show {
+    opacity: 1;
+}
+
+section#resume2 {
+    padding: 100px 0 0 0;
+}
+
+section#resume2 h1 {
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section#resume2 .container {
+    width: 80%;
+    max-width: 700px;
+}
+
+section#resume2 .container ul {
+    list-style: none;
+    width: 50%;
+    text-align: right;
+    display: inline-block;
+    height: 200px;
+    padding-top: 20px;
+    margin: 0;
+    vertical-align: top;
+}
+
+section#resume2 .skillname {
+    transform: translateX(-100px);
+    transition: 2s;
+}
+
+section#resume2 .skillname.show {
+    transform: translateX(0px);
+}
+
+section#resume2 .container ul li {
+    height: 20px;
+    margin: 7px;
+    line-height: 20px;
+}
+
+section#resume2 .container .skillbar {
+    width: 45%;
+    height: 200px;
+    padding-top: 20px;
+    display: inline-block;
+    transform: translateX(100px);
+    transition: 2s;
+}
+
+section#resume2 .container .skillbar.show {
+    width: 45%;
+    height: 200px;
+    padding-top: 20px;
+    display: inline-block;
+    transform: translateX(0px);
+}
+
+section#resume2 .container .skillbar .bar {
+    height: 20px;
+    border: solid 1px black;
+    margin: 7px;
+    border-radius: 3px;
+}
+
+section#resume2 .container .skillbar .bar .barcontent {
+    /* background-color: #1f7a7a; */
+    background-color: #5c5c5c;
+    height: 100%;
+    width: 20%;
+    transition: 1s;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent1 {
+    width: 0%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent1.show {
+    width: 85%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent2 {
+    width: 0%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent2.show {
+    width: 55%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent3 {
+    width: 0%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent3.show {
+    width: 25%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent4 {
+    width: 0%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent4.show {
+    width: 30%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent5 {
+    width: 0%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent5.show {
+    width: 85%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent6 {
+    width: 0%;
+}
+
+section#resume2 .container .skillbar .bar .barcontent.barcontent6.show {
+    width: 20%;
+}
+
+@media screen and (max-width: 800px) {
+    section#resume2 h1 {
+        text-align: left;
+        padding-left: 40px;
+    }
+    section#resume2 .container {
+        width: 80%;
+    }
+    section#resume2 .container ul {
+        display: inline-block;
+    }
+    section#resume2 .container ul .skills {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+
+/* 履歷 */
+
+.resume {
+    opacity: 0;
+    transition: 2s;
+    transform: translateX(200px);
+}
+
+.resume.show {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+section#resume3 {
+    padding: 100px 0px;
+}
+
+section#resume3 h1 {
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section#resume3 .container {
+    width: 80%;
+    text-align: center;
+}
+
+section#resume3 .container .resumepic {
+    height: 600px;
+    width: 600px;
+}
+
+section#resume3 .container .resumepic svg.text {
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: 13px;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    z-index: 10;
+}
+
+section#resume3 .container .resumepic svg.text text.company {
+    font-size: 16px;
+}
+
+section#resume3 .container .resumepic svg.text text.title {
+    fill: #ff9090;
+    font-size: 16px;
+}
+
+section#resume3 .container .resumepic text.time {
+    -webkit-transform: translate(-25px, -50px);
+    transform: translate(-25px, -50px);
+    font-size: 10px;
+}
+
+section#resume3 .container .resumepic polyline {
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+section#resume3 .container .resumepic line {
+    stroke: yellow;
+    stroke-width: 8px;
+    z-index: -1;
+}
+
+section#resume3 .container .resumepic line.school {
+    /* stroke: #00e6e6; */
+    stroke: #ffc0c0;
+}
+
+@media screen and (max-width: 800px) {
+    #resume3 {
+        display: none;
+    }
+}
+
+section#resume4 {
+    padding: 100px 0px;
+}
+
+section#resume4 h1 {
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+section#resume4 .container {
+    width: 80%;
+    text-align: center;
+}
+
+section#resume4 .container .resumevertical {
+    height: 600px;
+    width: 400px;
+}
+
+section#resume4 .container .resumevertical text {
+    font-size: 12px;
+}
+
+section#resume4 .container .resumevertical .company {
+    font-size: 15px;
+}
+
+section#resume4 .container .resumevertical .title {
+    fill: #006666;
+}
+
+section#resume4 .container .resumevertical polyline {
+    stroke: black;
+    stroke-width: 1px;
+    fill: none;
+}
+
+section#resume4 .container .resumevertical line {
+    stroke: yellow;
+    stroke-width: 7px;
+}
+
+section#resume4 .container .resumevertical line.school {
+    stroke: #00e6e6;
+}
+
+@media screen and (min-width: 800px) {
+    #resume4 {
+        display: none;
+    }
+}
+
+
+/* 網站作品 */
+
+section#works {
+    background-color: #858585;
+    padding: 100px 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+section#works .container {
+    width: 80%;
+    max-width: 800px;
+}
+
+section#works h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-family: 'Staatliches', cursive;
+}
+
+section#works .work {
+    height: 250px;
+    width: 90%;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin-top: 10px;
+    overflow: hidden;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: 1.5s;
+}
+
+section#works .work.show {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+section#works .work:hover {
+    -webkit-box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 10px black;
+}
+
+section#works .work:hover:before,
+section#works .work:hover .text,
+section#works .work:hover .link {
+    opacity: 1;
+}
+
+section#works .work:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+section#works .work img {
+    /* position: absolute; */
+    /* width: 100%; */
+    /* background-size: cover; */
+    /* left: 0;
+    top: 0; */
+    /* background-position: center center; */
+}
+
+section#works .work .text {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 1;
+    opacity: 0;
+}
+
+section#works .work .text h4 {
+    font-size: 15px;
+}
+
+section#works .work .link {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: solid 1px white;
+    border-radius: 1px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+section#works .work .link:hover {
+    background-color: white;
+}
+
+section#works .work .link:hover i {
+    color: #555;
+}
+
+section#works .work .link i {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+section#works .work img {
+    /* position: absolute; */
+    /* width: auto; */
+    height: 100%;
+    /* background-size: cover; */
+    /* left: 0;
+    top: 0; */
+    /* padding: 0;
+    margin: 0; */
+    /* background-position: center center; */
+    border: solid 0.5px black;
+}
+
+@media screen and (max-width: 800px) {
+    section#works .work img {
+        /* width: 100%; */
+    }
+}
+
+footer#footer {
+    background-color: #222;
+    color: white;
+    padding: 50px;
+    font-size: 12px;
+    margin: 0;
+}
+
+footer#footer i {
+    color: white;
+    font-size: 20px;
+}

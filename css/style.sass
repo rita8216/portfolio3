@@ -1,0 +1,617 @@
+*
+  // border: solid 1px #000
+  font-family: 'Poppins', 'Microsoft JhengHei', Helvetica, Arial, sans-serif, 微軟正黑體
+  letter-spacing: 1.5px
+
+html,body
+  padding: 0px
+  margin: 0px
+
+//  開頭動畫----------------------
+
+.showArea
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 9999
+  background-color: rgb(255, 255, 255)
+  .hand
+    position: absolute
+    top: 80%
+    left: 20%
+    margin-left: -200px
+    margin-top: -200px
+    animation: showPic 8s
+    height: 400px
+  .mouse
+    position: absolute
+    top: 20%
+    left: 80%
+    margin-left: -200px
+    margin-top: -200px
+    animation: showPic 8s
+    height: 400px
+  .name
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -200px
+    margin-top: -200px
+    animation: showPic 8s
+    height: 400px
+
+
+@keyframes showPic
+    0%
+      opacity: 0
+      transform: scale(0.1)
+    50%
+        opacity: 1
+        transform: scale(0.5)
+    100%
+        opacity: 0
+        transform: scale(0.5)
+
+
+// 滑鼠移動-------------------------
+#cross
+  position: absolute
+  background-image: url("https://i.imgur.com/iBt2icQ.png")
+  width: 60px
+  height: 60px
+  background-size: cover
+  transform: translate(-60%,-60%)
+  z-index: 10
+
+// nav導覽列----------------------
+
+.nav.top
+  background-color: transparent
+  color: black
+  border-bottom: solid 1px #444
+
+.nav
+  background-color: rgba(255,255,255,0.8)
+  width: 100%
+  position: fixed
+  top:0
+  transition: background-color 0.5s
+  color: black
+  z-index: 20
+
+  .logo
+    float: left
+    font-size: 20px
+    margin: 15px
+    margin-left: 30px
+    height: 40px
+    display: flex
+    align-items: center
+    font-weight: 300
+
+  .list
+    // float: right
+    margin-right: 20px
+    height: 40px
+    margin-top: 15px
+    margin-bottom: 15px
+    position: absolute
+    right: 20px
+
+    li
+      float: left
+      width: 120px
+      height: 100%
+      list-style: none
+      cursor: pointer
+      position: relative
+
+      &:hover
+        .en
+          opacity: 0
+        .ch
+          opacity: 1
+          padding-bottom: 6px
+      .en,.ch
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        transition: 0.5s
+
+
+      .en
+        opacity: 1
+        color: black
+        &.topcolor
+          color: white
+      .ch
+        opacity: 0
+        border-bottom: 1px solid black
+        padding-bottom: 0px
+        color: black
+        &.topcolor
+          border-bottom: 1px solid white
+          color: white
+
+  .btn
+    position: absolute
+    top: 0
+    right: 20px
+    width: 40px
+    height: 40px
+    margin: 15px
+    cursor: pointer
+    display: none
+    transition: 1s
+
+    .line
+      width: 25px
+      height: 3px
+      background-color: #000
+      position: absolute
+      left: 0px
+      padding: 2px
+      transition: 0.5s
+      &.line1
+        width: 30px
+        top: 11px
+        background-color: #111
+        &.lineclick
+          transform: translate(-2px,7px)rotate(45deg)
+      &.line2
+        top: 18px
+        background-color: #333
+        &.lineclick
+          transform: rotate(180deg)scale(0.1)
+          opacity: 0
+      &.line3
+        width: 30px
+        top: 25px
+        background-color: #666
+        &.lineclick
+          transform: translate(-2px,-7px)rotate(-45deg)
+
+// ----------------------
+section#bigmenu
+  width: 100%
+  height: 600px
+  background-color: rgb(255, 255, 255)
+  ul
+    position: absolute
+    top: 30%
+    left: 20%
+    transform: translate(-50%,-50%)
+    li
+      list-style: none
+      margin: 30px
+      font-size: 14px
+      opacity:0
+      a
+        text-decoration: none
+        color: black
+        transition: color .5s
+        &:hover
+          color: #555
+
+
+// #first----------------------
+
+section#first
+  margin: 0px
+  padding: 0
+  height: 550px
+  position: relative
+  overflow: hidden
+  background-image: url("https://i.imgur.com/V1nESzH.jpg")
+  background-size: cover
+  background-attachment: fixed
+  .namelogo
+    position: absolute
+    left: 50%
+    top: 180px
+    transform: translateX(-100px)
+    animation: logonameShow 2s
+    // width:200px
+    h2
+      font-family: 'Staatliches', cursive
+      font-size: 50px
+
+  @keyframes logonameShow
+    0%
+      opacity: 0
+      margin-top: 20px
+    100%
+      opacity: 1
+      margin-top: 0px
+
+  .explore
+    position: absolute
+    background-color: transparent
+    border: solid 2px #333
+    border-radius: 11px
+    top: 320px
+    left: 50%
+    transform: translateX(-50%)
+    width: 20px
+    height: 25px
+    animation: mousemove 1.2s infinite
+    opacity: 0
+    transition: .5s
+    box-shadow: 0px 0px 3px
+    &.top
+      opacity: 1
+    &:after
+      content:"V"
+      display: block
+      position: absolute
+      bottom: -25px
+      left: 35%
+      transform: scaleX(2.2)
+      font-size: 10px
+    .exploreline
+      width: 2px
+      height: 10px
+      background-color: #333
+      position: absolute
+      top: 10%
+      left: 50%
+      transform: translateX(-50%)
+  @keyframes mousemove
+    0%
+      top: 320px
+    50%
+      top: 330px
+    100%
+      top: 320px
+  .bigheadleft
+    position: absolute
+    top: 50%
+    left: 0px
+    transform: translate(-50%,-50%)
+  .bigheadright
+    position: absolute
+    right: 0px
+    top: 50%
+    transform: translate(50%,-50%)
+    img
+      width: 250px
+  .curveline1
+    position: absolute
+    top:35%
+    left: 25%
+    width: 70px
+    transition: 0.1s
+  .curveline2
+    position: absolute
+    top:50%
+    left: 65%
+    width: 80px
+    transition: 0.2s
+  .curveline3
+    position: absolute
+    top:70%
+    left: 45%
+    width: 50px
+    transition: 0.3s
+
+@media screen and (max-width: 800px)
+  .nav .btn
+    display: flex
+  .nav .list
+    display: none
+// #resume----------------------
+section#resume
+  position: relative
+  height: 500px
+  background: linear-gradient(transparent 0%,white 40%,#ffbb33)
+  background-image: url("https://i.imgur.com/V1nESzH.jpg")
+  background-size: cover
+  background-attachment: fixed
+  // background-color: #ffbb33
+
+  .autobiography
+    top: 0px
+    background-color: #fff
+    width: 80%
+    max-width: 600px
+    border: solid 2px black
+    font-size: 13px
+    text-indent: 28px
+    margin-left: auto
+    margin-right: auto
+    padding: 20px
+    border-radius: 5px
+    box-shadow: 0px 0px 5px
+    animation: resumemove 2.4s
+    position: relative
+    h1
+      position: absolute
+      transform: rotate(-90deg)
+      bottom: 90px
+      left: -150px
+      font-family: 'Staatliches', cursive
+    .tri
+      position: absolute
+      top: 0
+      width: 250px
+      transform: translateY(-105%)
+
+  @keyframes resumemove
+    0%
+      top: 50px
+    100%
+      top: 0px
+@media screen and (max-width:800px)
+  section#resume
+    height: 700px
+// ----------------------
+section#resume2
+  padding: 100px 0 0 0
+  h1
+    font-family: 'Staatliches', cursive
+    text-align: center
+    margin-bottom: 50px
+  .container
+    // display: inline-block
+    width:80%
+    max-width: 700px
+    ul
+      list-style: none
+      width:50%
+      text-align: right
+      display: inline-block
+      height: 200px
+      padding-top: 20px
+      margin: 0
+      vertical-align: top
+      li
+        height:20px
+        margin: 7px
+        line-height:20px
+
+    .skillbar
+      width: 45%
+      height: 200px
+      padding-top: 20px
+      display: inline-block
+      .bar
+        height:20px
+        border: solid 1px black
+        margin: 7px
+        border-radius: 3px
+        .barcontent
+          background-color: #1f7a7a
+          height: 100%
+          width: 20%
+          &.barcontent1
+            width: 85%
+          &.barcontent2
+            width: 55%
+          &.barcontent3
+            width: 25%
+          &.barcontent4
+            width: 30%
+          &.barcontent5
+            width: 85%
+          &.barcontent7
+            width: 20%
+@media screen and (max-width:800px)
+  section#resume2
+    h1
+      text-align: left
+      padding-left: 40px
+    .container
+      width: 80%
+
+      ul
+        // width: 58%
+        display: inline-block
+        .skills
+          font-size: 12px
+          line-height:20px
+      .skillbar
+        // width: 40%
+
+
+// ----------------------
+section#resume3
+  padding: 100px 0px
+  h1
+    font-family: 'Staatliches', cursive
+    text-align: center
+    margin-bottom: 20px
+  .container
+    width:80%
+    text-align: center
+    .resumepic
+      height: 600px
+      width: 600px
+
+      svg.text
+        text
+        writing-mode: vertical-rl
+        font-size: 13px
+        // line-height: 10px
+        transform: translateY(10px)
+        z-index: 10
+        text.company
+          font-size: 16px
+        text.title
+          fill: #006666
+          font-size: 16px
+      text.time
+        transform: translate(-25px,-50px)
+        font-size: 10px
+      polyline
+        stroke: black
+        stroke-width: 2px
+        fill: none
+      line
+        stroke: yellow
+        stroke-width: 8px
+        z-index:-1
+      line.school
+        stroke:#00e6e6
+@media screen and (max-width: 800px)
+  #resume3
+    display: none
+// ----------------------
+
+
+section#resume4
+  padding: 100px 0px
+  // display: none
+  h1
+    font-family: 'Staatliches', cursive
+    // text-align: center
+    margin-bottom: 20px
+    padding: 20px
+    padding-left: 40px
+  .container
+    width:80%
+    text-align: center
+    .resumevertical
+      height: 600px
+      width: 400px
+      text
+        font-size: 12px
+      .company
+        font-size: 15px
+      .title
+        fill: #006666
+      polyline
+        stroke: black
+        stroke-width: 1px
+        fill: none
+      line
+        stroke: yellow
+        stroke-width:7px
+      line.school
+        stroke:#00e6e6
+@media screen and (min-width: 800px)
+  #resume4
+    display: none
+
+
+
+
+
+// ----------------------
+
+section#works
+  background-color:  #155151
+  padding: 100px 0px
+  box-sizing: border-box
+  .container
+    width: 80%
+    max-width: 800px
+    // margin-left: auto
+    // margin-right: auto
+  h1
+    color: white
+    margin-bottom: 30px
+    font-family: 'Staatliches', cursive
+  .work
+    height: 250px
+    width: 90%
+    // height: 22.6%
+    background-color: #fff
+    box-sizing: border-box
+    padding: 20px
+    margin-top: 10px
+    // margin-left: 10px
+    overflow: hidden
+
+
+    &:hover
+      &:before,.text,.link
+        opacity:1
+      box-shadow: 0px 0px 10px black
+    &:before
+      content:""
+      display: block
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,0.8)
+      z-index: 1
+      opacity: 0
+      transition: 0.5s
+      position: absolute
+      left: 0
+      top: 0
+    img
+      position: absolute
+      width: 100%
+      // height: 100%
+      background-size: cover
+      left: 0
+      top: 0
+      background-position: center center
+
+    .text
+      position: absolute
+      left: 20px
+      bottom: 10px
+      color: white
+      transition: 0.5s
+      z-index: 1
+      opacity: 0
+      h4
+        font-size: 15px
+    .link
+      position: absolute
+      right: 20px
+      top: 20px
+      width: 40px
+      height: 40px
+      opacity: 0
+      transition: 0.5s
+      border: solid 1px white
+      border-radius: 1px
+      z-index: 1
+      cursor: pointer
+      &:hover
+        background-color: white
+        i
+          color: #555
+      i
+        font-size: 20px
+        position: absolute
+        top:50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        color: white
+
+  @media screen and (min-width: 800px)
+  .work
+    img
+      position: absolute
+      width: auto
+      height: 100%
+      background-size: cover
+      left: 0
+      top: 0
+      background-position: center center
+      border: solid 0.5px black
+// ----------------------
+
+footer#footer
+  background-color: #222
+  color: white
+  padding: 50px
+  font-size: 12px
+  margin: 0
+
+  i
+    color: white
+    font-size: 20px
+
+
+
+
+
+
+
